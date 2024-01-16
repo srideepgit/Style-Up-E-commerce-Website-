@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Page</title>
+    <link rel="stylesheet" href="mens.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start of NavBar -->
+    <div id="navbar">
+        <div >
+            <img onclick="homePage()" class="wth" src="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png" alt="logo">
+        </div>
+        
+        <div id="products_page">
+            <div>MEN</div>
+            <div>WOMEN</div>
+            <div>KIDS</div>
+            <div>HOME & LIVING</div>
+        </div>
+        <div>
+            <input type="text" name="search" id="search-bar" placeholder="Search for products, brands & more">
+        </div>
+        <div id="login_Status">
+        </div>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Start of Invite -->
+    <div id="invite">
+        <div><img src="https://w1.pngwing.com/pngs/226/799/png-transparent-rupee-symbol-indian-rupee-sign-currency-symbol-money-orange-area-logo-thumbnail.png" alt="">
+        </div>
+        <div><p>Invite friends to Styleup's EORS & get up to ₹150 StyupCash for every person who visits</p>
+        </div>
+        <button>Invite Now ></button>        
+    </div>
+    <!-- End of Invite -->
+
+    <!-- Start of the filter container -->
+    <div id="filtercontainer">
+        <div>
+            <p style="color:gray;font-size: 16px;">Home / <span style="color: black;font-weight: 700;font-size: 18px;">Men Collection</span></p>
+            <p style="font-size: 20px;font-weight: 700;">Total items: <span id="count">0</span></p>
+        </div>
+        <div>
+            <h2 style="font-weight:700;">Filters</h2>
+            <div id="lot">
+                <select name="" id=""><option value="">Bundles</option></select>
+                <select name="" id=""><option value="">Country of Origin</option></select>
+                <select name="" id=""><option value="">Size</option></select>
+            </div>
+            <div id="sortby">
+                <select name="" id="pricesort">
+                    <option value="">Sort by Price</option>
+                    <option value="Low to High">Low to High</option>
+                    <option value="High to Low">High to Low</option>
+                </select>
+                <select name="" id="namesort">
+                    <option value="">Sort by Name</option>
+                    <option value="Ascending">Ascending</option>
+                    <option value="Descending">Descending</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- End of the filter container -->
+
+    <!-- Start of the Main container -->
+    <div id="MainContainer">
+
+        <!-- Start of Left Section -->
+        <div id="left-section">
+            <div>
+                <h3 style="font-weight:700;">Categories</h3>
+                <input type="checkbox" id="tshirts" value="tshirts">
+                <span>Tshirts</span><br>
+                <input type="checkbox" id="shoes" value="shoes">
+                <span>Shoes</span><br>
+                <input type="checkbox" id="flips" value="flips">
+                <span>Flipflops</span><br>
+                <input type="checkbox" id="bags" value="bags">
+                <span>Bags</span><br>
+                <input type="checkbox" id="pants" value="pants" >
+                <span>Pants</span><br>
+            </div>
+            <div>
+                <h3 style="font-weight:700;">Price</h3>
+                <input type="checkbox" id="one" value="">
+                <span>Rs.100 - Rs.400</span><br>
+                <input type="checkbox" id="two">
+                <span>Rs.400 - Rs.1000</span><br>
+                <input type="checkbox" id="three">
+                <span>Rs.1000 - Rs.5000</span><br>
+                <input type="checkbox" id="four">
+                <span>Rs.5000 - Rs.9999</span><br>
+            </div>
+        </div>
+        <!-- End of the left Section -->
+
+        <!-- Start of the Right Section -->
+        <div id="Right-section">
+            <!-- Append you cards here -->
+        </div>
+        <!-- End of the right section -->
+    </div>
+    <!-- End of the Main container -->
+
+</body>
+</html>
+<script src="mens.js"></script>
+<script src="navbar.js"></script>
+<script src="search-algo.js"></script>

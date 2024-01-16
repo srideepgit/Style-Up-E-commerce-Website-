@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Address.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="left">
+            <div>
+                <a href="index.html">
+                    <img src="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png">
+                </a>
+            </div>
+        </div>
+        <div id="centre">
+            <span> <a href="cart.html"> BAG </a>------------- <span>ADDRESS</span> ------------- <a href="payment.html">PAYMENT</a> </span>
+        </div>
+        <div id="right">
+            <div>
+
+                <img src="https://i.postimg.cc/NGSHspcx/sprite-secure.png">
+
+            </div>
+            <div id="secure">
+                <span>100% secure</span>
+            </div>
+        </div>
+    </div>
+        <div id="address_container">
+            <h5>CONTACT DETAILS</h4>
+            <form>
+                <label>Name</label><br>
+                <input id="name" type="text" placeholder="Name"><br>
+                <label>Number</label><br>`
+                <input id="mbl" type="number" placeholder="Mobile No."><br>
+                <h5>ADDRESS DETAILS</h5>
+                <label>Pin Code</label><br>
+                <input type="number" placeholder="Pin Code" id="pin"><br>
+                <label>Address</label><br>
+                <input id="address" type="text" placeholder="Enter Address"><br>
+                <label>Locality</label><br>
+                <input type="text" placeholder="Locality/Town" id="town"><br>
+            </form>
+            
+        </div>
+        
+        <div id="button">
+            <button type="submit" class="btn" onclick="openpopup()">ADD ADDRESS</button>
+            <div class="popup" id="popup">
+                <img  src="https://www.clipartmax.com/png/full/34-342615_tick-symbol-tick-symbol.png">
+                <h2 >Thank You</h2>
+                <p>Your details has been successfully submitted. Thanks!</p>
+                <button type="button" onclick="closepopup()">OK</button>
+            </div>
+        </div>
+</body>
+</html>
+
+<script>
+
+
+    let popup=document.getElementById("popup");
+    
+    function openpopup(){
+        let name= document.querySelector("#name").value;
+        let number= document.querySelector("#mbl").value;
+        let pin= document.querySelector("#pin").value;
+        let address= document.querySelector("#address").value;
+    if(name.length>0&&number.length>0&&pin.length>0&&address.length>0){
+        popup.classList.add("open-popup");
+    }
+    }
+
+    function closepopup(){
+        popup.classList.remove("open-popup");
+        window.location.href="payment.html"
+    }
+</script>

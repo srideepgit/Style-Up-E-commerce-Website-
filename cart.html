@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="cart.css">
+<link rel="shortcut icon" href="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png"
+type="image/x-icon">
+</head>
+<body>
+<div id="navbar">
+<div id="left">
+<div>
+<a href="index.html">
+<img src="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png">
+</a>
+</div>
+</div>
+<div id="centre">
+<span><span>BAG</span>------------- <a href="Address.html">ADDRESS</a> ------
+------- <a href="payment.html"> PAYMENT</a> </span>
+</div>
+<div id="right">
+<div>
+<img src="https://i.postimg.cc/NGSHspcx/sprite-secure.png">
+</div>
+<div id="secure">
+<span>100% secure</span>
+</div>
+</div>
+</div>
+<div id="cartdiv">
+<span id="product"></span>
+<div id="totalcart">
+<div>
+<h2>PRICE DETAILS</h2>
+<br>
+<span>Items :</span>
+<span id="Noofitems"></span><br>
+<hr>
+<span>Total MRP :₹</span>
+<span id="cart-value"></span><br>
+<hr>
+<form>
+<label>Enter Coupan code</label><br>
+<input type="text" placeholder="Enter Coupan Code" id="coupan">
+<input type="submit" value="Apply Coupan">
+</form>
+<hr>
+<span>Total Amount : ₹</span>
+<span id="Finalamount"></span><br>
+<button id="address"><a href="Address.html">PLACE ORDER</a></button>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+let cartarr=JSON.parse(localStorage.getItem("cartData"))||[];
+window.addEventListener("load",function(){
+displaycart(cartarr)
+update()
+})
+function displaycart(cartarr){
+cartarr.forEach(function(el,index){
+let dives=document.createElement("div");
+dives.style.padding="5px"
+dives.style.backgroundColor="#fdefea"
+dives.style.marginBottom="10px"
+let divs=document.createElement("div");
+let image=document.createElement("img");
+image.setAttribute("src",el.image_url);
+let name=document.createElement("h3");
+name.innerText=el.name;
+// let catagory=document.createElement("p");
+// catagory.innerText=el.catagory;
+// catagory.style.color="gray"
+// catagory.style.fontSize="12px"
+let price=document.createElement("p");
+price.innerText="₹"+el.cartprice;
+let quan=document.createElement("div");
+quan.style.marginLeft="10px"
+quan.style.justifyContent="space-between"
+quan.style.textAlign="left"
+let dile=document.createElement("span");
+dile.style.border="1px solid #ccc"
+dile.style.margin="0px"
+dile.setAttribute("id","dile")
+let decr=document.createElement("button");
+decr.innerText="-";
+decr.addEventListener("click",function(){
+decrease(el,index,cartarr)
+})
+let quantity=document.createElement("span");
+quantity.innerText=el.quantity;
+let incr=document.createElement("button");
+incr.innerText="+";
+incr.addEventListener("click",function(){
+increase(el,index,cartarr);
+})
+// incre,decre,quantity append here
+dile.append(decr,quantity,incr)
+let dele=document.createElement("button");
+dele.setAttribute("id","dele")
+dele.innerText="REMOVE"
+dele.style.paddingLeft="0px"
+dele.addEventListener("click",function(){
+removeitem(el,index,cartarr)
+})
+quan.append(name,price,dile,dele);
+divs.append(image,quan)
+dives.append(divs)
+document.querySelector("#product").append(dives);
+})
+}
+//decrease item 
+function decrease(el,i,arr){
+arr[i].quantity--;
+if(arr[i].quantity==0){
+event.target.parentNode.remove();
+arr.splice(i,1);
+localStorage.setItem("cartData",JSON.stringify(arr));
+window.location.reload();
+}
+arr[i].cartprice=arr[i].quantity*el.price;
+localStorage.setItem("cartData",JSON.stringify(arr));
+window.location.reload();
+}
+//increase item
+function increase(el,i,arr){
+arr[i].quantity++;
+arr[i].cartprice=arr[i].quantity*el.price;
+localStorage.setItem("cartData",JSON.stringify(arr));
+window.location.reload();
+}
+//remove item
+function removeitem(el,i,arr){
+event.target.parentNode.remove();
+arr.splice(i,1);
+localStorage.setItem("cartData",JSON.stringify(arr));
+window.location.reload();
+}
+function update(){
+let items=0;
+let cartvalue=0;
+let cartarr1=JSON.parse(localStorage.getItem("cartData"))||[];
+for(let i=0;i<cartarr1.length;i++){
+items+=cartarr1[i].quantity;
+cartvalue+=cartarr1[i].cartprice;
+}
+document.querySelector("#Noofitems").innerText=items;
+document.querySelector("#cart-value").innerText=cartvalue;
+document.querySelector("#Finalamount").innerText=cartvalue;
+}
+// copuan
+document.querySelector("form").addEventListener("submit",handlepayment)
+let formtag=document.querySelector("form");
+function handlepayment(){
+event.preventDefault();
+let coupan=formtag.coupan.value;
+let cartvalue=(+document.querySelector("#Finalamount").innerText)
+if(coupan=="masai30"){
+let a =(cartvalue*0.7).toFixed(1);
+document.querySelector("#Finalamount").innerText=a;
+}
+}
+</script>

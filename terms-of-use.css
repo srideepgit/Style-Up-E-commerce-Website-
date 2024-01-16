@@ -1,0 +1,44 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+  }
+  #main-container {
+    width: 98%;
+    margin: 5px auto;
+    padding: auto 5%;
+  }
+  #main-container > div {
+    width: 100%;
+    margin: auto;
+  }
+  
+  #main-container img {
+    cursor: pointer;
+  }
+  #crauser_1 > button:hover,
+  #crauser_2 > button:hover {
+    background-color: rgba(40, 24, 10, 0.8);
+  }
+  
+  #end-container {
+    background-color: #fafbfc;
+    margin: 20px auto;
+    padding: 2% 5%;
+  }
+  #table {
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+  }
+  #end-container > div:nth-child(2) {
+    width: 100%;
+    margin: auto;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+  #end-container > div:nth-child(2) > h4 {
+    margin: 10px auto;
+  }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- Navbar -->
+<link rel="stylesheet" href="signin.css">
+<link rel="shortcut icon" href="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png" type="image/x-icon">
+</head>
+<body>
+    <div id="navbar">
+        <div id="left">
+            <div>
+                <a href="index.html">
+                <img src="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png">
+            </a>
+            </div>
+            <div>
+            <div> <a href="mens.html">MEN</a></div>
+            <div> <a href="womens.html">WOMEN</a></div>
+            <div> <a href="kids.html">KIDS</a></div>
+            <div> <a href="Home&Living.html">HOME LIVING</a></div>
+        </div>
+        </div>
+
+        <div id="right">
+            <div>
+                <input type="text" placeholder="Search for products,brands and more">
+            </div>
+            <div>
+                <img src="https://www.kindpng.com/picc/m/161-1613834_online-shopping-cart-green-shopping-cart-logo-hd.png">
+            </div>
+        </div>
+    </div>
+    <div id="signin_container">
+        <form>
+            <h2>Sign In</h2>
+            <label for="">Email</label><br />
+            <input id="mail" type="text" placeholder="Enter Email"><br />
+            <label for="">Password</label><br />
+            <input id="pass" type="text" placeholder="Enter Password"><br />
+           
+            <p>By signing up, I accept the Styleup<a href="http://127.0.0.1:5501/terms-of-use.html"> Terms of 
+                Services</a>. </p>
+                <input type="submit" value="Sign In">
+               <p>Don't have an account? <a href="signup.html">Sign up</a> </p>
+</body>
+</html>
+<script>
+    let userarr=JSON.parse(localStorage.getItem("userdata"))|| [];
+    document.querySelector("form").addEventListener("submit",myfunction);
+    let formtag=document.querySelector("form");
+   let loggeddetails=JSON.parse(localStorage.getItem("logginName"))||[];
+    function myfunction(){
+        let flag=false;
+        event.preventDefault();
+        let Email=formtag.mail.value;
+        let Password=formtag.pass.value;
+        userarr.forEach(function(el){    
+        if(Email==el.Email&&Password==el.Password){
+            loggeddetails.push(el);
+            localStorage.setItem("logginName",JSON.stringify(loggeddetails));
+          flag=true;
+    }
+        })
+        if(flag==false){
+        alert("Incorrect Id or password")
+        window.location.href="signup.html"
+       
+    }  else{
+        alert("Login successfull");
+        localStorage.setItem("loginStatus",true)
+        window.location.href="index.html";
+    }
+    }
+</script>

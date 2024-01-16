@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png" type="image/x-icon">
+</head>
+<body>
+    <div id="navbar">
+        <div id="left">
+            <div>
+                <a href="index.html">
+                <img src="https://i.postimg.cc/T2Lx6cQG/STYLE-UP-Photo-Room.png">
+            </a>
+            </div>
+            <div>
+            <div> <a href="mens.html">MEN</a></div>
+            <div> <a href="womens.html">WOMEN</a></div>
+            <div> <a href="kids.html">KIDS</a></div>
+            <div> <a href="Home&Living.html">HOME LIVING</a></div>
+        </div>
+        </div>
+
+        <div id="right">
+            <div>
+                <input type="text" placeholder="Search for products,brands and more">
+            </div>
+            <div>
+                <img src="https://www.kindpng.com/picc/m/161-1613834_online-shopping-cart-green-shopping-cart-logo-hd.png">
+            </div>
+        </div>
+    </div>
+    <div id="signup_container">
+    <form>
+        <h2>Sign Up</h2>
+        <label for="">Full Name</label><br />
+        <input id="name" type="text" placeholder="Enter Your Full Name"><br />
+        <label for="">Email</label><br />
+        <input id="mail" type="text" placeholder="Enter Email"><br />
+        <label for="">Password</label><br />
+        <input id="pass" type="text" placeholder="Enter Password"><br />
+       
+        <p>By signing up, I accept the Styleup<a href="http://127.0.0.1:5501/terms-of-use.html"> Terms of 
+            Services</a>. </p>
+            <input type="submit" value="Sign up">
+           <p>Already have an account? <a href="signin.html">Sign in</a></p>
+</form>
+</div>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",myfunction);
+    let formtag=document.querySelector("form");
+    let userarr=JSON.parse(localStorage.getItem("userdata"))|| [];
+    function myfunction(){
+       event.preventDefault();
+        let obj={
+            name:formtag.name.value,
+            Email:formtag.mail.value,
+            Password:formtag.pass.value
+        }
+        if(obj.name.length<=0){
+           alert("Enter correct name");
+           return;
+        }else if(obj.Email.substring(obj.Email.length-4)!=".com"){
+            alert("Enter correct Email")
+            return;
+        }else if(obj.Password.length<8){
+            alert("Weak Password:Enter atleast 8 character")
+            return;
+        }
+        userarr.push(obj)
+       localStorage.setItem('userdata', JSON.stringify(userarr))
+       window.location.replace("signin.html")
+    }
+    
+</script>

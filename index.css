@@ -1,0 +1,121 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+  }
+  #main-container {
+    width: 98%;
+    margin: 5px auto;
+    padding: auto 5%;
+  }
+  #main-container > div {
+    width: 100%;
+    margin: auto;
+  }
+  #home-pic {
+    width: 100%;
+    max-height: max-content;
+    margin-top: 10px;
+  }
+  #home-pic:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+  #main-container img {
+    cursor: pointer;
+  }
+  .image {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+  }
+  #products_grid1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+  #products_grid2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+  #products_grid1 > div > img,
+  #products_grid2 > div > img {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  #products_grid1 > div > img:hover,
+  #products_grid2 > div > img:hover {
+    transform: scale(1.05);
+    overflow: hidden;
+  }
+  /* crauser styling */
+  #crauser_1,
+  #crauser_2 {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    /* vertical-align: middle; */
+  }
+  #crauser_1 > img,
+  #crauser_2 > img {
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  /* Next & previous buttons */
+  .prev,
+  .next,
+  .prev1,
+  .next1 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px 15px;
+    margin-top: -22px;
+    color: teal;
+    font-size: 18px;
+    background-color: transparent;
+  }
+  .prev,
+  .prev1 {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .next,
+  .next1 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  #crauser_1 > button:hover,
+  #crauser_2 > button:hover {
+    background-color: rgba(40, 24, 10, 0.8);
+  }
+  
+  #end-container {
+    background-color: #fafbfc;
+    margin: 20px auto;
+    padding: 2% 5%;
+  }
+  #table {
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+  }
+  #end-container > div:nth-child(2) {
+    width: 100%;
+    margin: auto;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+  #end-container > div:nth-child(2) > h4 {
+    margin: 10px auto;
+  }

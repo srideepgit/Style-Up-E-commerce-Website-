@@ -1,0 +1,169 @@
+/* navbar */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Whitney,Arial, Helvetica, sans-serif;
+
+}
+#navbar{
+    width:100%;
+    height:80px;
+    display: grid;
+    grid-template-columns: 20% 30% 20%;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    }
+    #left img{
+    width:50px;
+   
+    }
+    #left{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    #left>div{
+    display: flex;
+    align-items: center;
+    }
+    #right{
+        height: 80px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    
+        justify-content: center;
+        }
+        #right>div:nth-child(1){
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-right: 5px;
+        }
+        #right>div:nth-child(1)>img{
+            width:20%;
+            height: 40%;
+        }
+       #secure{
+        display: flex;
+        font-size: 20px;
+        justify-content: left;
+        align-items: center;
+        color: gray;
+       }
+       #centre{
+        display: flex;
+        align-items: center;
+        color: gray;
+        justify-content: center;
+        font-size: 14px;
+       }
+       #centre>span>span{
+        text-decoration: underline;
+        color: #49cabb;
+       }
+       span>a{
+      color: gray;
+      font-size: 14px;
+       }
+ 
+
+#cartdiv{
+width: 100%;
+margin: auto;
+display: grid;
+grid-template-columns: 60% 20%;
+/* display: flex; */
+margin-top: 50px;
+align-items: center;
+justify-content:center;
+}
+
+#product{
+padding: 20px;
+gap:20px;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+text-align: center;
+border: 1px solid #ccc;
+}
+#product>div>div{
+display: flex;
+padding:5px;
+margin:5px;
+border-radius: 10px;
+background-color: white;
+}
+#product>div>div:hover{
+    transform: scale(1.04);
+}
+
+#dile button{
+padding:0px 10px 5px 10px;
+font-size: 20px;
+border:1px solid #ccc;
+background-color: transparent;
+color: black;
+border:0px;
+}
+#dele{
+    border:0px;
+    background-color: transparent;
+    display: block;
+    padding: 0px;
+    font-size: 10px;
+    color: #ff3f6c;
+}
+#cartdiv img{
+ border-radius: 10px;
+width:25%;
+height:50%;
+}
+#totalcart{
+padding: 30px;
+border-radius: 20px;
+position: fixed;
+top:130px;
+right:50px;
+border: 1px solid #ccc;
+background-color: white;
+}
+#totalcart button{
+width:100%;
+border: 0px;
+padding:5px 5px;
+background-color: #ff3f6c;
+margin-top: 15px;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+#totalcart input[type="submit"]{
+   border: 0px;
+   color: #ff3f6c;
+   font-size: 18px;
+   padding: 5px;
+   background-color: transparent;
+}
+#coupon{
+    border: 1px solid #ccc;
+    padding:5px;
+    margin:5px 0px;
+}
+hr{
+    margin: 10px;
+    color: #ccc;
+}
+button:hover,input[type="submit"]:hover{
+    cursor: pointer;
+}
+#decrement{
+    padding:20px
+}
