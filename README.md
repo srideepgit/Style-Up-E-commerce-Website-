@@ -1,4 +1,9 @@
 
+<div align="center">
+  <img src="https://github.com/srideepgit/Style-Up-E-commerce-Website-/assets/91597569/368a9fc0-58c9-420b-9535-a9bb110fcf63" alt="STYLE UP-PhotoRoom">
+</div>
+
+
 
 # Style-Up E-Commerce Website
 
@@ -6,7 +11,7 @@ Welcome to Style-Up, your go-to destination for a seamless and stylish online sh
 
 ## Preview
 
-![Style-Up Logo]![111](https://github.com/srideepgit/Style-Up-E-commerce-Website-/assets/91597569/76b8fdb9-8d8a-4937-baf4-837ed4580388)
+(https://github.com/srideepgit/Style-Up-E-commerce-Website-/assets/91597569/76b8fdb9-8d8a-4937-baf4-837ed4580388)
 
 ### Screenshots
 
