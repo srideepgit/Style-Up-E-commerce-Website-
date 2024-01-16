@@ -7,11 +7,11 @@
 
 # Style-Up E-Commerce Website
 
-Welcome to Style-Up, your go-to destination for a seamless and stylish online shopping experience! Explore the latest fashion trends with our innovative e-commerce platform that combines cutting-edge technology and trendsetting designs.
+Welcome to Style-Up, where fashion meets innovation in the digital realm. Our e-commerce platform is meticulously crafted to provide users with an unparalleled online shopping experience. With a focus on trendsetting designs, an intuitive user interface, and personalized recommendations.Users can sign up and log-in into the application using a general email-id or through social networking platform.Once logged in, Users will then be able to add products to their cart and then checkout for final shipping.Users can search products based on categories and are made aware of products .
 
 ## Preview
 
-(https://github.com/srideepgit/Style-Up-E-commerce-Website-/assets/91597569/76b8fdb9-8d8a-4937-baf4-837ed4580388)
+![111](https://github.com/srideepgit/Style-Up-E-commerce-Website-/assets/91597569/76b8fdb9-8d8a-4937-baf4-837ed4580388)
 
 ### Screenshots
 
