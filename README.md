@@ -65,7 +65,7 @@ Functionalities Provided of Styleup Online Fashion Website-
 ## Tech Stack
 
 - **Frontend:** HTML5, CSS3
-- **Backend:** Node.js, Express
+- **Backend:** SQL
 - **Continuous Integration:** GitHub Actions
 
 ## 🔗 Getting Started
